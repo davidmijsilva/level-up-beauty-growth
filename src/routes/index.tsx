@@ -6,6 +6,8 @@ import { Business } from "@/components/level-up/Business";
 import { DayInLife } from "@/components/level-up/DayInLife";
 import { Faq } from "@/components/level-up/Faq";
 import { Workspace } from "@/components/level-up/Workspace";
+import { Community } from "@/components/level-up/Community";
+import { CatalogCta } from "@/components/level-up/CatalogCta";
 import { Testimonials } from "@/components/level-up/Testimonials";
 import { ContactSection } from "@/components/level-up/ContactSection";
 import { Footer } from "@/components/level-up/Footer";
@@ -40,6 +42,8 @@ function Index() {
         <DayInLife />
         <Faq />
         <Workspace />
+        <Community />
+        <CatalogCta />
         <Testimonials />
         <ContactSection />
         <Footer />

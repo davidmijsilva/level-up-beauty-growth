@@ -1,33 +1,35 @@
-import { Leaf, Rabbit, Sparkles, FlaskConical, Gem, Heart, Droplets, Zap, WheatOff, CircleOff } from "lucide-react";
-
-const seals = [
-  { icon: Leaf, label: "Bio" },
-  { icon: Sparkles, label: "Vegan" },
-  { icon: WheatOff, label: "Sem Glúten" },
-  { icon: CircleOff, label: "Sem Parabenos" },
-  { icon: Rabbit, label: "Cruelty-Free" },
-];
+import { Sparkles, SprayCan, HeartHandshake, Home, Palette, Droplets } from "lucide-react";
 
 const categories = [
   {
-    icon: Gem,
-    title: "Perfumes de Luxo",
-    text: "Fragrâncias com 30% de essência pura, produzidas em Grasse (França), a capital mundial do perfume. Sem água adicionada, garantindo uma fixação premium.",
+    icon: Sparkles,
+    title: "Beleza",
+    text: "Cuidados pensados para diferentes rotinas e necessidades.",
   },
   {
-    icon: FlaskConical,
-    title: "Cosmética Avançada",
-    text: "Fórmulas de alta performance com ingredientes biológicos para uma pele radiante e saudável.",
+    icon: SprayCan,
+    title: "Perfumes",
+    text: "Fragrâncias para diferentes estilos e momentos.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Bem-estar",
+    text: "Produtos para complementar uma rotina de cuidado pessoal.",
+  },
+  {
+    icon: Home,
+    title: "Casa",
+    text: "Soluções para cuidar, limpar e perfumar os espaços.",
+  },
+  {
+    icon: Palette,
+    title: "Maquilhagem",
+    text: "Produtos para expressar e realçar a tua beleza.",
   },
   {
     icon: Droplets,
-    title: "Óleos Essenciais & Bem-estar",
-    text: "Extratos 100% naturais e certificados para uso terapêutico e cosmético.",
-  },
-  {
-    icon: Zap,
-    title: "Limpeza Profissional & Nutrição",
-    text: "Soluções de alta eficácia e gamas desenvolvidas para potenciar a tua energia.",
+    title: "Rituais de cuidado",
+    text: "Óleos e outras soluções para momentos de bem-estar.",
   },
 ];
 
@@ -37,27 +39,16 @@ export function Portfolio() {
       <div className="max-w-2xl">
         <p className="label-caps text-[0.65rem] text-brand">O nosso portefólio</p>
         <h2 className="mt-4 text-3xl text-foreground sm:text-4xl">
-          Qualidade de excelência, sem etiquetas de luxo
+          Um catálogo para todas as rotinas
         </h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-          Explora um universo de mais de 4500 produtos de alta qualidade, pensados para toda a
-          família e para o teu bem-estar.
+          Temos produtos para diferentes necessidades do dia a dia. Uma grande variedade significa
+          mais possibilidades de encontrares as áreas com que mais te identificas e de construíres
+          um projeto à tua maneira.
         </p>
       </div>
 
-      <ul className="mt-10 flex flex-wrap gap-3">
-        {seals.map(({ icon: Icon, label }) => (
-          <li
-            key={label}
-            className="inline-flex items-center gap-2 rounded-full border border-brand-soft bg-brand-tint px-4 py-2"
-          >
-            <Icon className="h-4 w-4 text-brand" strokeWidth={1.5} aria-hidden="true" />
-            <span className="label-caps text-[0.6rem] text-foreground">{label}</span>
-          </li>
-        ))}
-      </ul>
-
-      <div className="mt-10 grid gap-5 sm:grid-cols-2">
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map(({ icon: Icon, title, text }) => (
           <article
             key={title}
