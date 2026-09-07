@@ -11,3 +11,5 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIC
 export function whatsappLinkWithMessage(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
+
+export const CATALOG_LINK = "https://www.chogangroupspa.com/referral/SAR9509B0/PT";
