@@ -14,17 +14,11 @@ export function Community() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-2">
-        <img
-          src={seniorLeader.url}
-          alt="Sara Pereira a receber o prémio de Sénior Leader num evento corporativo"
-          className="aspect-[4/5] w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)] sm:translate-y-6"
-          loading="lazy"
-        />
+      <div className="mt-12">
         <img
           src={eventoFormacao.url}
           alt="Grande grupo de mulheres da equipa Level Up num evento de formação"
-          className="aspect-[4/5] w-full rounded-3xl object-cover object-top shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
+          className="mx-auto aspect-[16/9] w-full max-w-3xl rounded-3xl object-cover object-top shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
           loading="lazy"
         />
       </div>

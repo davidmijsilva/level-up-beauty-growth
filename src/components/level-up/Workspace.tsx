@@ -15,7 +15,12 @@ export function Workspace() {
             flexibilidade. Podes gerir o teu tempo e o teu crescimento de onde quiseres.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-4">
-            <PhotoPlaceholder label="Espaço para foto com os produtos" className="aspect-square" />
+            <img
+              src={seniorLeader.url}
+              alt="Sara Pereira a receber o prémio de Sénior Leader num evento corporativo"
+              className="aspect-square w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
+              loading="lazy"
+            />
             <PhotoPlaceholder label="Espaço para foto de ambiente" className="aspect-square" />
           </div>
         </div>
