@@ -3,18 +3,18 @@ import { Compass, HeartHandshake, Users } from "lucide-react";
 const pillars = [
   {
     icon: Compass,
-    title: "Descoberta da Oportunidade",
-    text: "Desenvolve um projeto de empreendedorismo de forma flexível e ao teu próprio ritmo.",
+    title: "Projeto flexível ao teu ritmo",
+    text: "Tens autonomia para construir o teu negócio de beleza à medida da tua vida, sem horários rígidos ou pressa.",
   },
   {
     icon: HeartHandshake,
-    title: "Acompanhamento e Orientação",
-    text: "Apoio constante para conheceres os produtos, aprenderes e dares os teus primeiros passos com segurança.",
+    title: "Acompanhamento próximo",
+    text: "A Sara acompanha-te desde o início: apoio na apresentação dos produtos, dicas práticas e follow-up contínuo.",
   },
   {
     icon: Users,
-    title: "Comunidade e Crescimento",
-    text: "Integração numa equipa onde podes partilhar experiências e desenvolver novas competências.",
+    title: "Comunidade e crescimento",
+    text: "Fazes parte de uma equipa unida onde partilhas experiências, aprendes com outras pessoas e celebras conquistas.",
   },
 ];
 
@@ -22,11 +22,11 @@ export function Pillars() {
   return (
     <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
       <div className="max-w-2xl">
-        <p className="label-caps text-[0.65rem] text-brand">O que nos torna únicos</p>
-        <h2 className="mt-4 text-3xl text-foreground sm:text-4xl">Como te vamos ajudar a crescer</h2>
+        <p className="label-caps text-[0.65rem] text-brand">Porquê juntar-te a nós</p>
+        <h2 className="mt-4 text-3xl text-foreground sm:text-4xl">O que ganhas ao fazeres parte da Level Up</h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-          Na Level Up, o nosso maior diferencial é o acompanhamento. Ninguém precisa de saber
-          tudo ou ter experiência prévia.
+          Um projeto pensado para quem quer começar sem ter de saber tudo desde o primeiro dia.
+          O teu crescimento é a nossa prioridade.
         </p>
       </div>
 

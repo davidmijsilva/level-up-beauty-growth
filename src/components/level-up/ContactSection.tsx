@@ -35,7 +35,7 @@ export function ContactSection() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="min-w-0">
           <h2 className="text-3xl text-foreground sm:text-4xl">
-            Pronta para dar o próximo passo? Fala comigo diretamente.
+            Queres saber como fazer parte da equipa? Fala comigo.
           </h2>
           <a
             href={WHATSAPP_LINK}
@@ -44,7 +44,7 @@ export function ContactSection() {
             className="mt-8 inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-brand px-7 text-base font-medium text-brand-foreground shadow-[0_12px_30px_-12px_var(--brand)] transition-transform hover:scale-[1.02]"
           >
             <MessageCircle className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
-            WhatsApp {PHONE_MOBILE}
+            Falar com a Sara pelo WhatsApp
           </a>
 
           <ul className="mt-10 space-y-4 text-sm text-muted-foreground">

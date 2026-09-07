@@ -23,9 +23,9 @@ export function Testimonials() {
   return (
     <section className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
       <div className="max-w-2xl">
-        <p className="label-caps text-[0.65rem] text-brand">Testemunhos</p>
+        <p className="label-caps text-[0.65rem] text-brand">Quem já entrou, recomenda</p>
         <h2 className="mt-4 text-3xl text-foreground sm:text-4xl">
-          O que diz quem já trabalha connosco
+          A opinião de quem já faz parte da equipa
         </h2>
       </div>
 
