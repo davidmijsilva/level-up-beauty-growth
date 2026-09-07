@@ -12,7 +12,7 @@ export function Hero() {
       />
       <div className="relative mx-auto w-full max-w-6xl px-5 py-6 sm:px-8">
         <nav className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4">
-          <Logo />
+          <Logo size="large" />
           <a
             href={WHATSAPP_LINK}
             target="_blank"
