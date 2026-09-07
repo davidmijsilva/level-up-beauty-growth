@@ -25,8 +25,12 @@ export function Pillars() {
         <p className="label-caps text-[0.65rem] text-brand">Porquê juntar-te a nós</p>
         <h2 className="mt-4 text-3xl text-foreground sm:text-4xl">O que ganhas ao fazeres parte da Level Up</h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-          Um projeto pensado para quem quer começar sem ter de saber tudo desde o primeiro dia.
-          O teu crescimento é a nossa prioridade.
+          Sei que tenho nas mãos uma oportunidade que se constrói com pessoas. Na Level Up, cada
+          pessoa pode começar por conhecer o projeto, os produtos e a forma como funciona o
+          negócio. Não é necessário chegar com tudo preparado ou saber exatamente por onde
+          começar. Fazemos parte de uma comunidade onde valorizamos a partilha, o crescimento e a
+          evolução conjunta. Cada percurso é diferente. O importante é ter vontade de aprender,
+          crescer e explorar novas possibilidades.
         </p>
       </div>
 
