@@ -1,5 +1,5 @@
 import saraMostruario from "@/assets/sara-mostruario.png.asset.json";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
+import seniorLeader from "@/assets/senior-leader.jpg.asset.json";
 
 export function Workspace() {
   return (

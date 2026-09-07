@@ -1,4 +1,3 @@
-import seniorLeader from "@/assets/senior-leader.jpg.asset.json";
 import eventoFormacao from "@/assets/evento-formacao.jpg.asset.json";
 
 export function Community() {
