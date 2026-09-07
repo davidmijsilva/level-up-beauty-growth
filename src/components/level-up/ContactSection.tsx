@@ -4,7 +4,6 @@ import {
   EMAIL,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
-  PHONE_LANDLINE,
   PHONE_MOBILE,
   WHATSAPP_LINK,
   whatsappLinkWithMessage,
