@@ -39,14 +39,9 @@ export function Testimonials() {
             <blockquote className="mt-4 text-sm leading-relaxed text-foreground/80">
               “{text}”
             </blockquote>
-            <figcaption className="mt-6 flex items-center gap-3">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-dashed border-brand-soft bg-brand-tint text-xs text-brand">
-                foto
-              </span>
-              <span className="min-w-0">
-                <span className="block truncate text-sm font-medium text-foreground">{name}</span>
-                <span className="block text-xs text-muted-foreground">Equipa Level Up</span>
-              </span>
+            <figcaption className="mt-6">
+              <span className="block truncate text-sm font-medium text-foreground">{name}</span>
+              <span className="block text-xs text-muted-foreground">Equipa Level Up</span>
             </figcaption>
           </figure>
         ))}
