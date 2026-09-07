@@ -1,6 +1,6 @@
 import { Instagram } from "lucide-react";
 import { Logo } from "./Logo";
-import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE_LANDLINE, PHONE_MOBILE } from "./contact-info";
+import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE_MOBILE } from "./contact-info";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-6 px-5 py-10 sm:grid-cols-[auto_1fr_auto] sm:items-center sm:px-8">
         <Logo />
         <p className="text-sm text-muted-foreground">
-          Coimbra · {PHONE_LANDLINE} / {PHONE_MOBILE} · {EMAIL}
+          Coimbra · {PHONE_MOBILE} · {EMAIL}
         </p>
         <a
           href={INSTAGRAM_URL}
@@ -26,3 +26,4 @@ export function Footer() {
     </footer>
   );
 }
+
