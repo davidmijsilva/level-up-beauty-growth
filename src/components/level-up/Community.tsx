@@ -1,4 +1,3 @@
-import equipaRua from "@/assets/equipa-rua.jpg.asset.json";
 import seniorLeader from "@/assets/senior-leader.jpg.asset.json";
 import eventoFormacao from "@/assets/evento-formacao.jpg.asset.json";
 
