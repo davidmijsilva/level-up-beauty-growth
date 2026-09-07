@@ -14,7 +14,7 @@ const testimonials = [
     text: "Nos momentos bons e menos bons, nunca me deixou desistir. Obrigada por toda a paciência, apoio e por acreditares em mim, mesmo quando eu própria duvido.",
   },
   {
-    name: "Margarida Saraiva",
+    name: "Margarida S.",
     text: "Gosto da confiança que temos, da forma como comunicamos e do ambiente leve que conseguimos manter. Isso torna o trabalho mais fácil e produtivo.",
   },
 ];
