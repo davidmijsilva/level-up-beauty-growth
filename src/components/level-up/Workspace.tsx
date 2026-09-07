@@ -1,4 +1,4 @@
-import saraRetrato from "@/assets/sara-retrato.jpg.asset.json";
+import saraMostruario from "@/assets/sara-mostruario.png.asset.json";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 
 export function Workspace() {
@@ -21,8 +21,8 @@ export function Workspace() {
         </div>
 
         <img
-          src={saraRetrato.url}
-          alt="Retrato de Sara Pereira, líder da equipa Level Up"
+          src={saraMostruario.url}
+          alt="Sara Pereira a sorrir enquanto mostra um mostruário de perfumes da equipa Level Up"
           className="w-full rounded-[2.5rem] object-cover shadow-[0_30px_60px_-35px_rgba(0,0,0,0.4)]"
           loading="lazy"
         />
