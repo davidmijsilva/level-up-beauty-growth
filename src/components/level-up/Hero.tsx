@@ -27,7 +27,7 @@ export function Hero() {
           <div className="min-w-0">
           <p className="label-caps flex items-center gap-2 text-[0.65rem] text-brand">
               <Sparkles className="h-3.5 w-3.5" strokeWidth={1.6} aria-hidden="true" />
-              Recrutamento · Vem fazer parte
+              Junta-te a nós · Vem fazer parte
             </p>
             <h1 className="mt-5 text-4xl leading-[1.1] text-foreground sm:text-5xl lg:text-[3.4rem]">
               Queres criar o teu próprio caminho no mundo da beleza?{" "}
