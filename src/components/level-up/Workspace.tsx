@@ -17,8 +17,8 @@ export function Workspace() {
           </p>
           <div className="mt-8 grid grid-cols-2 gap-4">
             <img
-              src={seniorLeader.url}
-              alt="Sara Pereira a receber o prémio de Sénior Leader num evento corporativo"
+              src={saraMostruario.url}
+              alt="Sara Pereira a sorrir enquanto mostra um mostruário de perfumes da equipa Level Up"
               className="aspect-square w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
               loading="lazy"
             />
@@ -27,8 +27,8 @@ export function Workspace() {
         </div>
 
         <img
-          src={saraMostruario.url}
-          alt="Sara Pereira a sorrir enquanto mostra um mostruário de perfumes da equipa Level Up"
+          src={seniorLeader.url}
+          alt="Sara Pereira a receber o prémio de Sénior Leader num evento corporativo"
           className="w-full rounded-[2.5rem] object-cover shadow-[0_30px_60px_-35px_rgba(0,0,0,0.4)]"
           loading="lazy"
         />
