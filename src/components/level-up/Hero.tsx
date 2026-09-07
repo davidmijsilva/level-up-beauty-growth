@@ -1,7 +1,7 @@
-import { MessageCircle, Sparkles } from "lucide-react";
+import { ExternalLink, MessageCircle, Sparkles } from "lucide-react";
 import { Logo } from "./Logo";
 import saraRetrato from "@/assets/sara-retrato-sem-logo.jpg.asset.json";
-import { WHATSAPP_LINK } from "./contact-info";
+import { CATALOG_LINK, WHATSAPP_LINK } from "./contact-info";
 
 export function Hero() {
   return (
@@ -49,12 +49,19 @@ export function Hero() {
                 Quero fazer parte da equipa
               </a>
               <a
-                href="#contacto"
-                className="inline-flex min-h-14 items-center justify-center rounded-full border border-border px-7 text-base text-foreground transition-colors hover:bg-brand-tint"
+                href={CATALOG_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full border border-border px-7 text-base text-foreground transition-colors hover:bg-brand-tint"
               >
-                Fala com a Sara
+                Ver o catálogo primeiro
+                <ExternalLink className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
               </a>
             </div>
+            <p className="mt-5 text-sm text-muted-foreground">
+              Sem experiência necessária · Sem obrigação de stock · Formação e acompanhamento
+              incluídos
+            </p>
           </div>
 
           <div className="relative">

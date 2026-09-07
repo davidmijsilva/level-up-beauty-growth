@@ -1,4 +1,5 @@
-import { Sparkles, SprayCan, HeartHandshake, Home, Palette, Droplets } from "lucide-react";
+import { Sparkles, SprayCan, HeartHandshake, Home, Palette, Droplets, ExternalLink } from "lucide-react";
+import { CATALOG_LINK } from "./contact-info";
 
 const categories = [
   {
@@ -61,6 +62,21 @@ export function Portfolio() {
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
           </article>
         ))}
+      </div>
+
+      <div className="mt-10 flex flex-col items-start gap-3 rounded-3xl border border-brand-soft bg-brand-tint/50 p-7 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-base text-foreground">
+          Curiosa? Cria a tua conta de cliente e vê o catálogo completo, sem compromisso.
+        </p>
+        <a
+          href={CATALOG_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-full border border-brand px-6 text-sm font-medium text-brand transition-colors hover:bg-brand-tint"
+        >
+          Ver catálogo
+          <ExternalLink className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+        </a>
       </div>
     </section>
   );

@@ -15,6 +15,14 @@ const faqs = [
     a: "Não! Trabalhas sem obrigatoriedade de stock e com risco zero.",
   },
   {
+    q: "Posso começar só como cliente e decidir depois?",
+    a: "Claro! Podes criar a tua conta de cliente sem compromisso, conhecer o catálogo e experimentar os produtos. Muitas das pessoas da equipa começaram exatamente assim.",
+  },
+  {
+    q: "Quanto tempo preciso de dedicar por semana?",
+    a: "O que fizer sentido para ti. Há quem dedique algumas horas por semana em part-time e quem construa um projeto a tempo inteiro. Ajudo-te a definir um ritmo realista.",
+  },
+  {
     q: "Preciso de experiência em vendas para começar?",
     a: "Não! Na Level Up, damos-te toda a formação contínua, estratégia e acompanhamento que precisas a partir do zero.",
   },

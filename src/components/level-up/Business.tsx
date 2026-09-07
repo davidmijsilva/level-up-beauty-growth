@@ -1,4 +1,5 @@
-import { PiggyBank, HandCoins, Users, Plane } from "lucide-react";
+import { PiggyBank, HandCoins, Users, Plane, MessageCircle } from "lucide-react";
+import { WHATSAPP_LINK } from "./contact-info";
 
 const gains = [
   {
@@ -50,6 +51,21 @@ export function Business() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-brand px-8 text-base font-medium text-brand-foreground shadow-[0_12px_30px_-12px_var(--brand)] transition-transform hover:scale-[1.02]"
+          >
+            <MessageCircle className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
+            Quero perceber como começar
+          </a>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Conversa simples, sem compromisso — explico-te tudo passo a passo.
+          </p>
         </div>
       </div>
     </section>

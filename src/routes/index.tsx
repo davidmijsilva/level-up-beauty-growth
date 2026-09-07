@@ -40,11 +40,11 @@ function Index() {
         <Portfolio />
         <Business />
         <DayInLife />
-        <Faq />
         <Workspace />
         <Community />
-        <CatalogCta />
         <Testimonials />
+        <Faq />
+        <CatalogCta />
         <ContactSection />
         <Footer />
       </main>

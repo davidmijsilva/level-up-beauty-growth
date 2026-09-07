@@ -1,6 +1,6 @@
 import { Instagram } from "lucide-react";
 import { Logo } from "./Logo";
-import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE_MOBILE } from "./contact-info";
+import { CATALOG_LINK, EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE_MOBILE } from "./contact-info";
 
 export function Footer() {
   return (
@@ -18,9 +18,19 @@ export function Footer() {
             <Instagram className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
           </a>
         </div>
-        <p className="text-sm text-muted-foreground">
-          Coimbra · {PHONE_MOBILE} · {EMAIL}
-        </p>
+        <div className="text-center sm:text-right">
+          <a
+            href={CATALOG_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-brand underline underline-offset-4"
+          >
+            Criar conta e ver catálogo
+          </a>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Coimbra · {PHONE_MOBILE} · {EMAIL}
+          </p>
+        </div>
       </div>
       <p className="pb-8 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} Level Up · Sara Pereira

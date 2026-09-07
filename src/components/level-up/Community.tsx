@@ -1,4 +1,5 @@
 import eventoFormacao from "@/assets/evento-formacao.jpg.asset.json";
+import { WHATSAPP_LINK } from "./contact-info";
 
 export function Community() {
   return (
@@ -22,6 +23,19 @@ export function Community() {
           loading="lazy"
         />
       </div>
+
+      <p className="mx-auto mt-8 max-w-2xl text-center text-base text-muted-foreground">
+        Há sempre lugar para mais uma pessoa nesta equipa.{" "}
+        <a
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-brand underline underline-offset-4"
+        >
+          Fala comigo e conhece o projeto
+        </a>
+        .
+      </p>
     </section>
   );
 }
