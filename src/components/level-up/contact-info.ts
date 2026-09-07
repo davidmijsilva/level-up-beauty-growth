@@ -1,6 +1,5 @@
 export const WHATSAPP_NUMBER = "351967871181";
 export const PHONE_MOBILE = "967 871 181";
-export const PHONE_LANDLINE = "238 579 972";
 export const EMAIL = "saarap08@gmail.com";
 export const INSTAGRAM_HANDLE = "_saarapereira_";
 export const INSTAGRAM_URL = "https://instagram.com/_saarapereira_";
