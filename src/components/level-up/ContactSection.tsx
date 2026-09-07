@@ -109,7 +109,7 @@ export function ContactSection() {
           <p className="mt-3 text-center text-xs text-muted-foreground">
             {sent
               ? "Mensagem preparada no WhatsApp — falta só carregares em enviar."
-              : "Ao enviar, a tua mensagem abre no WhatsApp já preenchida."}
+               : "Irás ser contactada por mim em menos de 24h."}
           </p>
         </form>
       </div>
