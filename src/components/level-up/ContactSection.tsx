@@ -54,15 +54,9 @@ export function ContactSection() {
             </li>
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand" strokeWidth={1.6} aria-hidden="true" />
-              <span>
-                <a className="hover:text-brand" href={`tel:+351${PHONE_LANDLINE.replace(/\s/g, "")}`}>
-                  {PHONE_LANDLINE}
-                </a>
-                {" · "}
-                <a className="hover:text-brand" href={`tel:+351${PHONE_MOBILE.replace(/\s/g, "")}`}>
-                  {PHONE_MOBILE}
-                </a>
-              </span>
+              <a className="hover:text-brand" href={`tel:+351${PHONE_MOBILE.replace(/\s/g, "")}`}>
+                {PHONE_MOBILE}
+              </a>
             </li>
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand" strokeWidth={1.6} aria-hidden="true" />
