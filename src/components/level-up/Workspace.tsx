@@ -11,8 +11,8 @@ export function Workspace() {
             Um dia a dia leve, digital e feito à tua medida
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Trabalhamos com produtos que as pessoas adoram e com uma rotina que se adapta à tua
-            vida. Aqui ficam alguns momentos do nosso ambiente de trabalho.
+            Trabalha com produtos que as pessoas adoram, num ambiente descontraído e com total
+            flexibilidade. Podes gerir o teu tempo e o teu crescimento de onde quiseres.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-4">
             <PhotoPlaceholder label="Espaço para foto com os produtos" className="aspect-square" />
