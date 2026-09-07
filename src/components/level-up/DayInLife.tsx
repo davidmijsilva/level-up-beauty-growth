@@ -1,5 +1,5 @@
 import { Clock, MessageCircleHeart, Share2 } from "lucide-react";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
+import equipaRua from "@/assets/equipa-rua.jpg.asset.json";
 
 const steps = [
   {
