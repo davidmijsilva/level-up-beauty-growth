@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/level-up/Hero";
 import { Pillars } from "@/components/level-up/Pillars";
+import { Portfolio } from "@/components/level-up/Portfolio";
+import { Business } from "@/components/level-up/Business";
+import { DayInLife } from "@/components/level-up/DayInLife";
+import { Faq } from "@/components/level-up/Faq";
 import { Workspace } from "@/components/level-up/Workspace";
 import { Testimonials } from "@/components/level-up/Testimonials";
 import { ContactSection } from "@/components/level-up/ContactSection";
