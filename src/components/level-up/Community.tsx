@@ -1,4 +1,3 @@
-import equipaRua from "@/assets/equipa-rua.jpg.asset.json";
 import seniorLeader from "@/assets/senior-leader.jpg.asset.json";
 import eventoFormacao from "@/assets/evento-formacao.jpg.asset.json";
 
@@ -16,13 +15,7 @@ export function Community() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <img
-          src={equipaRua.url}
-          alt="Equipa Level Up num momento descontraído na rua"
-          className="aspect-[4/5] w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
-          loading="lazy"
-        />
+      <div className="mt-12 grid gap-5 sm:grid-cols-2">
         <img
           src={seniorLeader.url}
           alt="Sara Pereira a receber o prémio de Sénior Leader num evento corporativo"
@@ -32,7 +25,7 @@ export function Community() {
         <img
           src={eventoFormacao.url}
           alt="Grande grupo de mulheres da equipa Level Up num evento de formação"
-          className="aspect-[4/5] w-full rounded-3xl object-cover object-top shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)] sm:col-span-2 lg:col-span-1"
+          className="aspect-[4/5] w-full rounded-3xl object-cover object-top shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
           loading="lazy"
         />
       </div>
