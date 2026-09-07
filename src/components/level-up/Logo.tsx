@@ -10,10 +10,10 @@ export function Logo() {
       aria-label="Falar com Sara Pereira no WhatsApp"
     >
       <div className="min-w-0 leading-tight">
-        <p className="truncate font-display text-base text-foreground transition-colors group-hover:text-brand">
+        <p className="truncate font-display text-[1.5rem] text-foreground transition-colors group-hover:text-brand">
           Sara Pereira
         </p>
-        <p className="label-caps truncate text-[0.6rem] text-brand">Level Up</p>
+        <p className="label-caps truncate text-[0.9rem] text-brand">Level Up</p>
       </div>
     </a>
   );
