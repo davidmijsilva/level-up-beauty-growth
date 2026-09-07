@@ -34,9 +34,15 @@ export function ContactSection() {
     <section id="contacto" className="bg-brand-tint/60">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="min-w-0">
-          <h2 className="text-3xl text-foreground sm:text-4xl">
-            Queres saber como fazer parte da equipa? Fala comigo.
+          <p className="label-caps text-[0.65rem] text-brand">O próximo passo</p>
+          <h2 className="mt-4 text-3xl text-foreground sm:text-4xl">
+            Vamos conversar sobre o teu lugar na equipa
           </h2>
+          <ol className="mt-6 space-y-3 text-base text-muted-foreground">
+            <li>1. Falamos e conto-te como funciona, sem compromisso.</li>
+            <li>2. Vês o catálogo e experimentas os produtos.</li>
+            <li>3. Decides o teu ritmo — e começo a acompanhar-te.</li>
+          </ol>
           <a
             href={WHATSAPP_LINK}
             target="_blank"
