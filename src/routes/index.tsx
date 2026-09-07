@@ -5,6 +5,7 @@ import { Workspace } from "@/components/level-up/Workspace";
 import { Testimonials } from "@/components/level-up/Testimonials";
 import { ContactSection } from "@/components/level-up/ContactSection";
 import { Footer } from "@/components/level-up/Footer";
+import { WhatsAppFloat } from "@/components/level-up/WhatsAppFloat";
 
 const title = "Level Up | Empreendedorismo em beleza e perfumaria com Sara Pereira";
 const description =
@@ -26,13 +27,17 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="bg-background text-foreground">
-      <Hero />
-      <Pillars />
-      <Workspace />
-      <Testimonials />
-      <ContactSection />
-      <Footer />
-    </main>
+    <>
+      <main className="bg-background text-foreground">
+        <Hero />
+        <Pillars />
+        <Workspace />
+        <Testimonials />
+        <ContactSection />
+        <Footer />
+      </main>
+      <WhatsAppFloat />
+    </>
   );
 }
+
