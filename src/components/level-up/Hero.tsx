@@ -43,7 +43,7 @@ export function Hero() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-brand px-7 text-base font-medium text-brand-foreground shadow-[0_12px_30px_-12px_var(--brand)] transition-transform hover:scale-[1.02] active:scale-[0.99]"
+                className="inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-brand px-7 text-[0.95rem] font-medium whitespace-nowrap text-brand-foreground shadow-[0_12px_30px_-12px_var(--brand)] transition-transform hover:scale-[1.02] active:scale-[0.99]"
               >
                 <MessageCircle className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
                 Quero saber mais pelo WhatsApp
