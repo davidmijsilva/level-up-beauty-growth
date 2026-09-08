@@ -1,6 +1,7 @@
+import difusorAmbiente from "@/assets/difusor-ambiente.jpg.asset.json";
 import saraMostruario from "@/assets/sara-mostruario.png.asset.json";
 import seniorLeader from "@/assets/senior-leader.jpg.asset.json";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
+
 
 export function Workspace() {
   return (
@@ -22,7 +23,12 @@ export function Workspace() {
               className="aspect-square w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
               loading="lazy"
             />
-            <PhotoPlaceholder label="Espaço para foto de ambiente" className="aspect-square" />
+            <img
+              src={difusorAmbiente.url}
+              alt="Difusor de ambiente elegante com varetas, ideal para perfumar a casa"
+              className="aspect-square w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
+              loading="lazy"
+            />
           </div>
         </div>
 
