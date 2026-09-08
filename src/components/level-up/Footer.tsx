@@ -33,12 +33,17 @@ export function Footer() {
           </p>
         </div>
       </div>
-      <p className="pb-8 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Level Up · Sara Pereira ·{" "}
-        <Link to="/legal" className="underline underline-offset-4 hover:text-brand">
+      <div className="flex flex-col items-center gap-3 px-5 pb-28 sm:pb-10">
+        <Link
+          to="/legal"
+          className="inline-flex min-h-11 items-center rounded-full border border-border px-5 text-sm font-medium text-foreground underline underline-offset-4 transition-colors hover:border-brand hover:text-brand"
+        >
           Informação legal
         </Link>
-      </p>
+        <p className="text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Level Up · Sara Pereira
+        </p>
+      </div>
     </footer>
   );
 }
