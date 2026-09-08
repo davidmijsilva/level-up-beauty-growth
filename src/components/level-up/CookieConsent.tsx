@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { OPEN_PREFERENCES_EVENT, readConsent, saveConsent } from "@/lib/consent";
 import { initTrackingGate } from "@/lib/tracking";
@@ -9,6 +9,8 @@ export function CookieConsent() {
   const [view, setView] = useState<View>("hidden");
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
+  const bannerRef = useRef<HTMLDivElement>(null);
+  const [bannerHeight, setBannerHeight] = useState(0);
 
   useEffect(() => {
     const cleanup = initTrackingGate();
@@ -31,6 +33,14 @@ export function CookieConsent() {
       window.removeEventListener(OPEN_PREFERENCES_EVENT, open);
     };
   }, []);
+
+  useEffect(() => {
+    if (view !== "banner" || !bannerRef.current) return;
+    const measure = () => setBannerHeight(bannerRef.current?.offsetHeight ?? 0);
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [view]);
 
   const decide = useCallback((choice: { analytics: boolean; marketing: boolean }) => {
     saveConsent(choice);
