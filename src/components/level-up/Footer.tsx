@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
+import { openCookiePreferences } from "@/lib/consent";
 import { CATALOG_LINK, EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE_MOBILE } from "./contact-info";
 
 export function Footer() {
@@ -28,6 +29,13 @@ export function Footer() {
           <Link to="/legal" className="text-muted-foreground hover:text-brand">
             Informação legal
           </Link>
+          <button
+            type="button"
+            onClick={openCookiePreferences}
+            className="text-muted-foreground hover:text-brand"
+          >
+            Preferências de cookies
+          </button>
           <a
             href={INSTAGRAM_URL}
             target="_blank"
