@@ -36,10 +36,19 @@ export function CookieConsent() {
 
   useEffect(() => {
     if (view !== "banner" || !bannerRef.current) return;
-    const measure = () => setBannerHeight(bannerRef.current?.offsetHeight ?? 0);
+    const measure = () => {
+      const height = bannerRef.current?.offsetHeight ?? 0;
+      setBannerHeight(height);
+      if (height > 0) {
+        document.documentElement.style.setProperty("--cookie-banner-height", `${height}px`);
+      }
+    };
     measure();
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    return () => {
+      window.removeEventListener("resize", measure);
+      document.documentElement.style.removeProperty("--cookie-banner-height");
+    };
   }, [view]);
 
   const decide = useCallback((choice: { analytics: boolean; marketing: boolean }) => {
