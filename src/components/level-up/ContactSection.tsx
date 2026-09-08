@@ -39,10 +39,6 @@ export function ContactSection() {
     }
   }
 
-  function resetForm() {
-    setStatus("idle");
-  }
-
   const field =
     "mt-1.5 w-full rounded-2xl border border-border bg-background px-4 py-3.5 text-base text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-brand";
 
@@ -107,23 +103,14 @@ export function ContactSection() {
               <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
                 O 1º passo para o teu futuro já está garantido. Vou entrar em contacto contigo assim que possível para percebermos juntas o melhor caminho para ti.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <button
-                  type="button"
-                  onClick={resetForm}
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-border bg-background px-6 text-sm font-medium text-foreground transition-colors hover:bg-muted"
-                >
-                  Voltar a testar
-                </button>
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 text-sm font-medium text-brand-foreground shadow-[0_10px_24px_-10px_var(--brand)] transition-transform hover:scale-[1.02]"
-                >
-                  Falar com a Sara
-                </a>
-              </div>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex min-h-14 items-center justify-center rounded-full bg-brand px-8 text-base font-medium text-brand-foreground shadow-[0_10px_24px_-10px_var(--brand)] transition-transform hover:scale-[1.02]"
+              >
+                Falar com a Sara
+              </a>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
