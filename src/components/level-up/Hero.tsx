@@ -1,6 +1,6 @@
 import { ExternalLink, MessageCircle, Sparkles } from "lucide-react";
 import { Logo } from "./Logo";
-import saraRetrato from "@/assets/sara-retrato-sem-logo.jpg.asset.json";
+import saraRetrato from "@/assets/sara-retrato-sem-logo.webp";
 import { CATALOG_LINK, WHATSAPP_LINK } from "./contact-info";
 
 export function Hero() {
@@ -67,7 +67,7 @@ export function Hero() {
           <div className="relative">
             <div className="absolute inset-x-6 bottom-0 top-8 rounded-[2.5rem] bg-brand-tint" aria-hidden="true" />
             <img
-              src={saraRetrato.url}
+              src={saraRetrato}
               alt="Retrato de Sara Pereira, líder da equipa Level Up"
               className="relative mx-auto w-full max-w-md rounded-[2.5rem] object-cover shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]"
               loading="eager"
