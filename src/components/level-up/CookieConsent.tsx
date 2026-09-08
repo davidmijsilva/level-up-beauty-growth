@@ -62,7 +62,7 @@ export function CookieConsent() {
 
   if (view === "preferences") {
     return (
-      <div className="fixed inset-0 z-[60] flex items-end justify-center bg-foreground/40 p-3 backdrop-blur-sm sm:items-center">
+      <div className="fixed inset-0 z-[70] flex items-end justify-center bg-foreground/40 p-3 backdrop-blur-sm sm:items-center">
         <div
           role="dialog"
           aria-modal="true"
