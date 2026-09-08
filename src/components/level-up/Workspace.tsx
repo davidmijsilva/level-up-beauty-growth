@@ -26,7 +26,7 @@ export function Workspace() {
             <img
               src={difusorAmbiente.url}
               alt="Difusor de ambiente elegante com varetas, ideal para perfumar a casa"
-              className="aspect-square w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
+              className="aspect-square w-full rounded-3xl object-cover object-bottom shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
               loading="lazy"
             />
           </div>
