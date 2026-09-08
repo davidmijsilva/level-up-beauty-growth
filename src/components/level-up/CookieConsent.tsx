@@ -41,6 +41,7 @@ export function CookieConsent() {
       setBannerHeight(height);
       if (height > 0) {
         document.documentElement.style.setProperty("--cookie-banner-height", `${height}px`);
+        document.body.style.paddingBottom = `${height + 16}px`;
       }
     };
     measure();
@@ -48,6 +49,7 @@ export function CookieConsent() {
     return () => {
       window.removeEventListener("resize", measure);
       document.documentElement.style.removeProperty("--cookie-banner-height");
+      document.body.style.removeProperty("padding-bottom");
     };
   }, [view]);
 
