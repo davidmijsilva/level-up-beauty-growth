@@ -39,10 +39,6 @@ export function ContactSection() {
     }
   }
 
-  function resetForm() {
-    setStatus("idle");
-  }
-
   const field =
     "mt-1.5 w-full rounded-2xl border border-border bg-background px-4 py-3.5 text-base text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-brand";
 
