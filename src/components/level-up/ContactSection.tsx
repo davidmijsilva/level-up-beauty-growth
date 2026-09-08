@@ -95,55 +95,83 @@ export function ContactSection() {
           </ul>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="rounded-3xl border border-border bg-card p-6 sm:p-8"
-        >
-          <div className="grid gap-4 sm:grid-cols-2">
-            <label className="block text-sm text-foreground sm:col-span-2">
-              Nome
-              <input name="nome" required placeholder="O teu nome" className={field} />
-            </label>
-            <label className="block text-sm text-foreground">
-              Email
-              <input type="email" name="email" required placeholder="email@exemplo.pt" className={field} />
-            </label>
-            <label className="block text-sm text-foreground">
-              Telemóvel
-              <input type="tel" name="telemovel" required placeholder="9xx xxx xxx" className={field} />
-            </label>
-            <label className="block text-sm text-foreground sm:col-span-2">
-              Mensagem
-              <textarea
-                name="mensagem"
-                rows={4}
-                placeholder="Conta-me um pouco sobre ti"
-                className={`${field} resize-none`}
-              />
-            </label>
-          </div>
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-foreground px-7 text-base font-medium text-background transition-transform hover:scale-[1.01] disabled:opacity-60"
-          >
-            {status === "sending" ? "A enviar…" : "Enviar mensagem"}
-          </button>
-          <p className="mt-3 text-center text-xs text-muted-foreground">
-            {status === "sent"
-              ? "Mensagem enviada com sucesso — irei contactar-te em menos de 24h."
-              : status === "error"
-                ? "Algo correu mal. Tenta novamente ou fala comigo pelo WhatsApp."
-                : "Irás ser contactada por mim em menos de 24h."}
-          </p>
-          <p className="mt-2 text-center text-xs text-muted-foreground">
-            Ao enviar, aceitas a{" "}
-            <Link to="/legal" hash="privacidade" className="underline underline-offset-4 hover:text-brand">
-              política de privacidade
-            </Link>
-            .
-          </p>
-        </form>
+        <div className="rounded-3xl border border-border bg-card p-6 sm:p-8">
+          {status === "sent" ? (
+            <div className="flex flex-col items-center justify-center py-10 text-center sm:py-14">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand/10 text-brand">
+                <Sparkles className="h-7 w-7" strokeWidth={1.8} aria-hidden="true" />
+              </div>
+              <h3 className="mt-6 text-2xl font-medium text-foreground sm:text-3xl">
+                O teu primeiro passo está dado
+              </h3>
+              <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
+                O 1º passo para o teu futuro já está garantido. Vou entrar em contacto contigo assim que possível para percebermos juntas o melhor caminho para ti.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <button
+                  type="button"
+                  onClick={resetForm}
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-border bg-background px-6 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                >
+                  Voltar a testar
+                </button>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 text-sm font-medium text-brand-foreground shadow-[0_10px_24px_-10px_var(--brand)] transition-transform hover:scale-[1.02]"
+                >
+                  Falar com a Sara
+                </a>
+              </div>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="block text-sm text-foreground sm:col-span-2">
+                  Nome
+                  <input name="nome" required placeholder="O teu nome" className={field} />
+                </label>
+                <label className="block text-sm text-foreground">
+                  Email
+                  <input type="email" name="email" required placeholder="email@exemplo.pt" className={field} />
+                </label>
+                <label className="block text-sm text-foreground">
+                  Telemóvel
+                  <input type="tel" name="telemovel" required placeholder="9xx xxx xxx" className={field} />
+                </label>
+                <label className="block text-sm text-foreground sm:col-span-2">
+                  Mensagem
+                  <textarea
+                    name="mensagem"
+                    rows={4}
+                    placeholder="Conta-me um pouco sobre ti"
+                    className={`${field} resize-none`}
+                  />
+                </label>
+              </div>
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-foreground px-7 text-base font-medium text-background transition-transform hover:scale-[1.01] disabled:opacity-60"
+              >
+                {status === "sending" ? "A enviar…" : "Enviar mensagem"}
+              </button>
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                {status === "error"
+                  ? "Algo correu mal. Tenta novamente ou fala comigo pelo WhatsApp."
+                  : "Irás ser contactada por mim em menos de 24h."}
+              </p>
+              <p className="mt-2 text-center text-xs text-muted-foreground">
+                Ao enviar, aceitas a{" "}
+                <Link to="/legal" hash="privacidade" className="underline underline-offset-4 hover:text-brand">
+                  política de privacidade
+                </Link>
+                .
+              </p>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );
