@@ -12,6 +12,7 @@ import { Testimonials } from "@/components/level-up/Testimonials";
 import { ContactSection } from "@/components/level-up/ContactSection";
 import { Footer } from "@/components/level-up/Footer";
 import { WhatsAppFloat } from "@/components/level-up/WhatsAppFloat";
+import { CookieNotice } from "@/components/level-up/CookieNotice";
 
 const title = "Level Up | Empreendedorismo em beleza e perfumaria com Sara Pereira";
 const description =
