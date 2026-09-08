@@ -132,7 +132,7 @@ export function CookieConsent() {
         role="dialog"
         aria-live="polite"
         aria-label="Consentimento de cookies"
-        className="fixed bottom-0 left-0 right-0 z-[60] border-t border-border bg-card/95 px-4 py-4 shadow-[0_-8px_30px_-12px_rgba(0,0,0,0.2)] backdrop-blur-md"
+        className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card/95 px-4 py-4 shadow-[0_-8px_30px_-12px_rgba(0,0,0,0.2)] backdrop-blur-md"
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
           <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
