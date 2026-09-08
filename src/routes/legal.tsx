@@ -9,6 +9,7 @@ const description =
 const url = "https://level-up-beauty-growth.lovable.app/legal";
 
 export const Route = createFileRoute("/legal")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title },
