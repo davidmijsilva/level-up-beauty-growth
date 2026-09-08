@@ -1,50 +1,44 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
-import { Logo } from "./Logo";
 import { CATALOG_LINK, EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE_MOBILE } from "./contact-info";
 
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-5 py-10 sm:flex-row sm:justify-between sm:px-8">
-        <div className="flex items-center gap-4">
-          <Logo />
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-4 px-5 py-8 pb-24 text-center sm:flex-row sm:justify-between sm:gap-6 sm:px-8 sm:pb-8 sm:text-left">
+        <p className="text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Level Up · Sara Pereira · Coimbra
+        </p>
+
+        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+          <a href={`tel:+351${PHONE_MOBILE.replace(/\s/g, "")}`} className="text-muted-foreground hover:text-brand">
+            {PHONE_MOBILE}
+          </a>
+          <a href={`mailto:${EMAIL}`} className="text-muted-foreground hover:text-brand">
+            {EMAIL}
+          </a>
+          <a
+            href={CATALOG_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-brand hover:underline"
+          >
+            Catálogo
+          </a>
+          <Link to="/legal" className="text-muted-foreground hover:text-brand">
+            Informação legal
+          </Link>
           <a
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Instagram @${INSTAGRAM_HANDLE}`}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-border text-brand transition-colors hover:bg-brand-tint"
+            className="text-brand hover:opacity-80"
           >
             <Instagram className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
           </a>
-        </div>
-        <div className="text-center sm:text-right">
-          <a
-            href={CATALOG_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-brand underline underline-offset-4"
-          >
-            Criar conta e ver catálogo
-          </a>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Coimbra · {PHONE_MOBILE} · {EMAIL}
-          </p>
-        </div>
-      </div>
-      <div className="flex flex-col items-center gap-3 px-5 pb-28 sm:pb-10">
-        <Link
-          to="/legal"
-          className="inline-flex min-h-11 items-center rounded-full border border-border px-5 text-sm font-medium text-foreground underline underline-offset-4 transition-colors hover:border-brand hover:text-brand"
-        >
-          Informação legal
-        </Link>
-        <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Level Up · Sara Pereira
-        </p>
+        </nav>
       </div>
     </footer>
   );
 }
-
