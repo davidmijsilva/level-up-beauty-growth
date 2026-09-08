@@ -41,6 +41,7 @@ export function CookieConsent() {
       setBannerHeight(height);
       if (height > 0) {
         document.documentElement.style.setProperty("--cookie-banner-height", `${height}px`);
+        document.body.style.paddingBottom = `${height + 16}px`;
       }
     };
     measure();
@@ -48,6 +49,7 @@ export function CookieConsent() {
     return () => {
       window.removeEventListener("resize", measure);
       document.documentElement.style.removeProperty("--cookie-banner-height");
+      document.body.style.removeProperty("padding-bottom");
     };
   }, [view]);
 
@@ -126,59 +128,50 @@ export function CookieConsent() {
   }
 
   return (
-    <>
-      <div
-        ref={bannerRef}
-        role="dialog"
-        aria-live="polite"
-        aria-label="Consentimento de cookies"
-        className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card/95 px-4 py-4 shadow-[0_-8px_30px_-12px_rgba(0,0,0,0.2)] backdrop-blur-md"
-      >
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Usamos cookies estritamente necessários ao funcionamento da página e, com o teu
-            consentimento, cookies de estatísticas, marketing e links de afiliação. Nada disso é
-            ativado antes de escolheres.{" "}
-            <Link to="/legal" hash="cookies" className="text-brand underline underline-offset-4">
-              Política de privacidade e cookies
-            </Link>
-          </p>
+    <div
+      ref={bannerRef}
+      role="dialog"
+      aria-live="polite"
+      aria-label="Consentimento de cookies"
+      className="fixed bottom-4 left-4 right-4 z-50 rounded-2xl border border-border bg-card/95 px-4 py-4 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.25)] backdrop-blur-md sm:bottom-6 sm:left-1/2 sm:right-auto sm:w-[min(100%-3rem,64rem)] sm:-translate-x-1/2"
+    >
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+        <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Usamos cookies estritamente necessários ao funcionamento da página e, com o teu
+          consentimento, cookies de estatísticas, marketing e links de afiliação. Nada disso é
+          ativado antes de escolheres.{" "}
+          <Link to="/legal" hash="cookies" className="text-brand underline underline-offset-4">
+            Política de privacidade e cookies
+          </Link>
+        </p>
 
-          <div className="flex shrink-0 flex-col gap-3 sm:items-end">
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <button
-                type="button"
-                onClick={() => decide({ analytics: true, marketing: true })}
-                className="inline-flex min-h-11 items-center justify-center rounded-full bg-brand px-5 text-sm font-medium text-brand-foreground transition-transform hover:scale-[1.01]"
-              >
-                Aceitar todos
-              </button>
-              <button
-                type="button"
-                onClick={() => decide({ analytics: false, marketing: false })}
-                className="inline-flex min-h-11 items-center justify-center rounded-full border border-border px-5 text-sm text-foreground transition-colors hover:border-brand hover:text-brand"
-              >
-                Rejeitar não essenciais
-              </button>
-            </div>
+        <div className="flex shrink-0 flex-col gap-3 sm:items-end">
+          <div className="flex flex-col gap-2 sm:flex-row">
             <button
               type="button"
-              onClick={() => setView("preferences")}
-              className="self-start text-xs text-muted-foreground underline underline-offset-4 hover:text-brand sm:self-auto"
+              onClick={() => decide({ analytics: true, marketing: true })}
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-brand px-5 text-sm font-medium text-brand-foreground transition-transform hover:scale-[1.01]"
             >
-              Gerir preferências
+              Aceitar todos
+            </button>
+            <button
+              type="button"
+              onClick={() => decide({ analytics: false, marketing: false })}
+              className="inline-flex min-h-11 items-center justify-center rounded-full border border-border px-5 text-sm text-foreground transition-colors hover:border-brand hover:text-brand"
+            >
+              Rejeitar não essenciais
             </button>
           </div>
+          <button
+            type="button"
+            onClick={() => setView("preferences")}
+            className="self-start text-xs text-muted-foreground underline underline-offset-4 hover:text-brand sm:self-auto"
+          >
+            Gerir preferências
+          </button>
         </div>
       </div>
-      {bannerHeight > 0 && (
-        <div
-          aria-hidden="true"
-          style={{ height: bannerHeight }}
-          className="pointer-events-none block"
-        />
-      )}
-    </>
+    </div>
   );
 }
 
