@@ -101,6 +101,12 @@ function LegalPage() {
               cedidos a terceiros para fins comerciais.
             </p>
             <p>
+              <strong className="text-foreground">Com que fundamento.</strong> O tratamento dos
+              dados do formulário assenta no teu consentimento, dado ao enviares a mensagem. Os
+              cookies de estatísticas, marketing e afiliação assentam também no teu consentimento,
+              recolhido no aviso de cookies (ver secção 3).
+            </p>
+            <p>
               <strong className="text-foreground">Como são enviados.</strong> O formulário é
               processado por um serviço externo de envio de emails (Web3Forms), que apenas
               reencaminha a mensagem para o email indicado acima.
