@@ -1,4 +1,4 @@
-import eventoFormacao from "@/assets/evento-formacao.jpg.asset.json";
+import eventoFormacao from "@/assets/evento-formacao.webp";
 import { WHATSAPP_LINK } from "./contact-info";
 
 export function Community() {
@@ -17,7 +17,7 @@ export function Community() {
 
       <div className="mt-12">
         <img
-          src={eventoFormacao.url}
+          src={eventoFormacao}
           alt="Grande grupo de mulheres da equipa Level Up num evento de formação"
           className="mx-auto aspect-[16/9] w-full max-w-3xl rounded-3xl object-cover object-top shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
           loading="lazy"

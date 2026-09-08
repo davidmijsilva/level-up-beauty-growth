@@ -1,5 +1,5 @@
 import { Clock, MessageCircleHeart, Share2 } from "lucide-react";
-import equipaRua from "@/assets/equipa-rua.jpg.asset.json";
+import equipaRua from "@/assets/equipa-rua.webp";
 
 const steps = [
   {
@@ -51,7 +51,7 @@ export function DayInLife() {
         </div>
 
         <img
-          src={equipaRua.url}
+          src={equipaRua}
           alt="Equipa Level Up num momento descontraído na rua"
           className="aspect-[4/5] w-full rounded-[2.5rem] object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
           loading="lazy"

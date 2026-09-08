@@ -1,6 +1,6 @@
-import difusorAmbiente from "@/assets/difusor-ambiente.jpg.asset.json";
-import saraMostruario from "@/assets/sara-mostruario.png.asset.json";
-import seniorLeader from "@/assets/senior-leader.jpg.asset.json";
+import difusorAmbiente from "@/assets/difusor-ambiente.webp";
+import saraMostruario from "@/assets/sara-mostruario.webp";
+import seniorLeader from "@/assets/senior-leader.webp";
 
 
 export function Workspace() {
@@ -18,13 +18,13 @@ export function Workspace() {
           </p>
           <div className="mt-8 grid grid-cols-2 gap-4">
             <img
-              src={saraMostruario.url}
+              src={saraMostruario}
               alt="Sara Pereira a sorrir enquanto mostra um mostruário de perfumes da equipa Level Up"
               className="aspect-square w-full rounded-3xl object-cover shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
               loading="lazy"
             />
             <img
-              src={difusorAmbiente.url}
+              src={difusorAmbiente}
               alt="Difusor de ambiente elegante com varetas, ideal para perfumar a casa"
               className="aspect-square w-full rounded-3xl object-cover object-bottom shadow-[0_20px_45px_-30px_rgba(0,0,0,0.4)]"
               loading="lazy"
@@ -33,7 +33,7 @@ export function Workspace() {
         </div>
 
         <img
-          src={seniorLeader.url}
+          src={seniorLeader}
           alt="Sara Pereira a receber o prémio de Sénior Leader num evento corporativo"
           className="w-full rounded-[2.5rem] object-cover shadow-[0_30px_60px_-35px_rgba(0,0,0,0.4)]"
           loading="lazy"
