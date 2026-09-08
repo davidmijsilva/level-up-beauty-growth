@@ -133,23 +133,47 @@ function LegalPage() {
               podem ser copiados ou reutilizados sem autorização.
             </p>
             <p>
-              Esta página pode encaminhar para sites de terceiros, que têm regras próprias e estão
-              fora do seu controlo. Alguns desses links são links de referência.
+              <strong className="text-foreground">Divulgação de afiliação.</strong> Esta página pode
+              encaminhar para sites de terceiros, que têm regras próprias e estão fora do seu
+              controlo. Alguns desses links são links de referência/afiliação: se te registares ou
+              comprares através deles, Sara Pereira pode receber uma compensação, sem qualquer custo
+              adicional para ti.
             </p>
             <p>
               A esta página aplica-se a lei portuguesa.
             </p>
           </Section>
 
-          <Section id="cookies" eyebrow="3" heading="Cookies">
+          <Section id="cookies" eyebrow="3" heading="Cookies e consentimento">
             <p>
-              Esta página não utiliza cookies de estatísticas, de publicidade nem de seguimento.
-              São usados apenas os recursos estritamente necessários ao funcionamento do site.
+              Quando entras nesta página pela primeira vez, é apresentado um pedido de consentimento
+              com três opções: aceitar todos, rejeitar os não essenciais ou gerir as preferências
+              por categoria. Nada além do estritamente necessário é ativado antes de escolheres, e
+              rejeitar é tão simples como aceitar.
             </p>
             <p>
-              Por esse motivo, não é apresentado nenhum pedido de consentimento de cookies. Se algum
-              dia forem introduzidas ferramentas de análise ou publicidade, este texto será
-              atualizado e o teu consentimento será pedido previamente.
+              <strong className="text-foreground">Estritamente necessários.</strong> Garantem o
+              funcionamento da página e o envio do formulário de contacto. Não dependem de
+              consentimento. Inclui-se aqui o registo da tua própria escolha sobre cookies, guardado
+              no teu navegador (armazenamento local) para não voltar a perguntar em cada visita.
+            </p>
+            <p>
+              <strong className="text-foreground">Estatísticas.</strong> Só com o teu consentimento.
+              Servem para perceber, de forma agregada, como a página é utilizada.
+            </p>
+            <p>
+              <strong className="text-foreground">Marketing e afiliação.</strong> Só com o teu
+              consentimento. Permitem medir cliques em links de afiliação e podem envolver cookies
+              de terceiros. Enquanto não consentires, estes recursos não são carregados.
+            </p>
+            <p>
+              Podes mudar de ideias a qualquer momento: no rodapé da página existe o link
+              «Preferências de cookies». Retirar o consentimento é tão fácil como o dar e não afeta
+              a licitude do tratamento feito antes disso.
+            </p>
+            <p>
+              Nota: se seguires um link externo (por exemplo, para o catálogo), esse site pode
+              colocar os seus próprios cookies, regidos pelas políticas desse site.
             </p>
           </Section>
         </div>
