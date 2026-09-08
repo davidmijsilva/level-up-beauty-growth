@@ -27,7 +27,7 @@ export function Footer() {
             Catálogo
           </a>
           <Link to="/legal" className="text-muted-foreground hover:text-brand">
-            Informação legal
+             Informação legal 
           </Link>
           <button
             type="button"
