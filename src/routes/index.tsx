@@ -18,6 +18,8 @@ const title = "Level Up | Empreendedorismo em beleza e perfumaria com Sara Perei
 const description =
   "Junta-te à equipa Level Up: um projeto de empreendedorismo flexível em cosmética, beleza e perfumaria, com acompanhamento próximo e sem experiência necessária.";
 
+const ogImageUrl = "https://sarapereira.pt/sara-pereira-perfil.jpg";
+
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
@@ -28,7 +30,13 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://level-up-beauty-growth.lovable.app/" },
+      { property: "og:image", content: ogImageUrl },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Sara Pereira, líder da equipa Level Up" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImageUrl },
+      { name: "twitter:image:alt", content: "Sara Pereira, líder da equipa Level Up" },
     ],
     links: [{ rel: "canonical", href: "https://level-up-beauty-growth.lovable.app/" }],
   }),
