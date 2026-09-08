@@ -6,25 +6,36 @@ import {
   INSTAGRAM_URL,
   PHONE_MOBILE,
   WHATSAPP_LINK,
-  whatsappLinkWithMessage,
 } from "./contact-info";
 
-export function ContactSection() {
-  const [sent, setSent] = useState(false);
+const WEB3FORMS_KEY = "ef3b2a12-37f6-4420-b1d3-e6dcbde0d3e4";
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+export function ContactSection() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const message = [
-      `Olá Sara! Sou ${String(data.get("nome") ?? "")}.`,
-      String(data.get("mensagem") ?? ""),
-      `Email: ${String(data.get("email") ?? "")}`,
-      `Telemóvel: ${String(data.get("telemovel") ?? "")}`,
-    ]
-      .filter(Boolean)
-      .join("\n");
-    window.open(whatsappLinkWithMessage(message), "_blank", "noopener,noreferrer");
-    setSent(true);
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    data.append("access_key", WEB3FORMS_KEY);
+    data.append("subject", "Novo contacto — Level Up");
+
+    setStatus("sending");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+      const result = (await response.json()) as { success?: boolean };
+      if (result.success) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   const field =
@@ -108,14 +119,17 @@ export function ContactSection() {
           </div>
           <button
             type="submit"
-            className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-foreground px-7 text-base font-medium text-background transition-transform hover:scale-[1.01]"
+            disabled={status === "sending"}
+            className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-foreground px-7 text-base font-medium text-background transition-transform hover:scale-[1.01] disabled:opacity-60"
           >
-            Enviar mensagem
+            {status === "sending" ? "A enviar…" : "Enviar mensagem"}
           </button>
           <p className="mt-3 text-center text-xs text-muted-foreground">
-            {sent
-              ? "Mensagem preparada no WhatsApp — falta só carregares em enviar."
-               : "Irás ser contactada por mim em menos de 24h."}
+            {status === "sent"
+              ? "Mensagem enviada com sucesso — irei contactar-te em menos de 24h."
+              : status === "error"
+                ? "Algo correu mal. Tenta novamente ou fala comigo pelo WhatsApp."
+                : "Irás ser contactada por mim em menos de 24h."}
           </p>
         </form>
       </div>
