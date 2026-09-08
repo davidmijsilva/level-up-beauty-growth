@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
 import {
   EMAIL,
   INSTAGRAM_HANDLE,
@@ -37,6 +37,10 @@ export function ContactSection() {
     } catch {
       setStatus("error");
     }
+  }
+
+  function resetForm() {
+    setStatus("idle");
   }
 
   const field =
