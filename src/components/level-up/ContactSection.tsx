@@ -119,14 +119,17 @@ export function ContactSection() {
           </div>
           <button
             type="submit"
-            className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-foreground px-7 text-base font-medium text-background transition-transform hover:scale-[1.01]"
+            disabled={status === "sending"}
+            className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-full bg-foreground px-7 text-base font-medium text-background transition-transform hover:scale-[1.01] disabled:opacity-60"
           >
-            Enviar mensagem
+            {status === "sending" ? "A enviar…" : "Enviar mensagem"}
           </button>
           <p className="mt-3 text-center text-xs text-muted-foreground">
-            {sent
-              ? "Mensagem preparada no WhatsApp — falta só carregares em enviar."
-               : "Irás ser contactada por mim em menos de 24h."}
+            {status === "sent"
+              ? "Mensagem enviada com sucesso — irei contactar-te em menos de 24h."
+              : status === "error"
+                ? "Algo correu mal. Tenta novamente ou fala comigo pelo WhatsApp."
+                : "Irás ser contactada por mim em menos de 24h."}
           </p>
         </form>
       </div>
