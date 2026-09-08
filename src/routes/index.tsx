@@ -50,6 +50,7 @@ function Index() {
         <Footer />
       </main>
       <WhatsAppFloat />
+      <CookieNotice />
     </>
   );
 }
