@@ -131,6 +131,13 @@ export function ContactSection() {
                 ? "Algo correu mal. Tenta novamente ou fala comigo pelo WhatsApp."
                 : "Irás ser contactada por mim em menos de 24h."}
           </p>
+          <p className="mt-2 text-center text-xs text-muted-foreground">
+            Ao enviar, aceitas a{" "}
+            <Link to="/legal" hash="privacidade" className="underline underline-offset-4 hover:text-brand">
+              política de privacidade
+            </Link>
+            .
+          </p>
         </form>
       </div>
     </section>
