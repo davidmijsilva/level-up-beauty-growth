@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 import { CATALOG_LINK, EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, PHONE_MOBILE } from "./contact-info";
@@ -33,7 +34,10 @@ export function Footer() {
         </div>
       </div>
       <p className="pb-8 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Level Up · Sara Pereira
+        © {new Date().getFullYear()} Level Up · Sara Pereira ·{" "}
+        <Link to="/legal" className="underline underline-offset-4 hover:text-brand">
+          Informação legal
+        </Link>
       </p>
     </footer>
   );
